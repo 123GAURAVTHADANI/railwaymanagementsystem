@@ -1,0 +1,2 @@
+# railwaymanagementsystem
+CONTAINS JFRAME FOR USER LOGIN FOR BOOKING ,SMTP(MAIL TRANSFER TO THE RECEIPIENT)and cancel the booking.
