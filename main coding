@@ -1,0 +1,408 @@
+/*
+   PROJECT ON RAILWAY RESERVATION 
+created by:-
+GAURAV THADANI
+*/
+import java.util.*;
+import java.io.*;
+import java.util.Random;
+import java.util.Properties;
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+ class railway1
+ {
+void function()
+{
+System.out.println("$$$ RAILWAY RESERVATION CENTER $$$");
+System.out.println(" $$OPTIONS$$");
+System.out.println(" 1:BOOK A TICKET:");
+System.out.println(" 2.DISPLAY THE DETAILS :");
+System.out.println(" 3.CANCEL A TICKET:");
+System.out.println(" 4.RESERVATION CHART FOR THE PARTICULAR CHART:");
+  
+ }
+ }
+ 
+	 
+abstract class railway2
+{
+abstract void book();
+}
+
+class book1 extends railway2
+{
+void book()
+{
+	String name[]=new String[200];
+    String phoneno[]=new String[200];
+    String age[]=new String[10];
+String address[]=new String[200];
+int max1=278;
+int max2=150;
+int max3=75;
+Scanner obj=new Scanner(System.in);
+System.out.println("WELCOME TO THE BOOKING SECTION:");
+System.out.println("ENTER THE SOURCE STATION:");
+String source=obj.nextLine();
+System.out.println("ENTER THE DESTINATION STATION:");
+String destination=obj.nextLine();
+System.out.println("ENTER THE CLASS \n 1.sleeper\n 2.Ac III tier \n 3.Ac II tier");
+int class1;
+
+class1=obj.nextInt();
+System.out.println("ENTER THE NUMBER OF TICKETS:");
+int c=obj.nextInt();
+int availableticket=0;
+
+try
+{
+    if(class1==1&&max1>=c)
+    {
+	availableticket=1;
+	}
+	else if(class1==2&&max2>=c)
+	{
+	availableticket=1;
+	}
+	else if(class1==3&&max3>=c)
+	{
+	availableticket=1;
+	}
+	if(availableticket==1)
+	{
+		FileWriter fw=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer=new BufferedWriter(fw);
+		buffer.write("----------RAILWAY RESERVATION SLIP--------");
+		   buffer.close();
+		   
+		FileWriter fw11=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer11=new BufferedWriter(fw11);
+		buffer11.newLine();
+		buffer11.close();
+		   
+	for(int i=1;i<=c;i++)
+	{
+		FileWriter fw0=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer5=new BufferedWriter(fw0);
+		buffer5.write("NAME OF THE PASSENGER:");
+		buffer5.close();
+		
+		
+		FileWriter fw24=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer24=new BufferedWriter(fw24);
+		buffer24.newLine();
+		buffer24.close();
+		
+		System.out.println("ENTER THE NAME OF THE PASSENGER:");
+	    name[i]=obj.next();
+		
+	     FileWriter fw1=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer1=new BufferedWriter(fw1);
+		buffer1.write(name[i]);
+		buffer1.close();
+		
+	     FileWriter fw25=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer25=new BufferedWriter(fw25);
+		buffer25.newLine();
+		buffer25.close();
+		
+		FileWriter fw12=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer12=new BufferedWriter(fw12);
+		
+		buffer12.write("PHONE NUMBER OF THE PASSENGER:" );
+		buffer12.close();
+		
+		FileWriter fw13=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer13=new BufferedWriter(fw13);
+		buffer13.newLine();
+		buffer13.close();
+		System.out.println("ENTER THE PHONE NUMBER OF THE PASSENGER:");
+		phoneno[i]=obj.next();
+		
+		FileWriter fw4=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer4=new BufferedWriter(fw4);
+		buffer4.write(phoneno[i]);
+		buffer4.close();
+		
+		FileWriter fw8=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer8=new BufferedWriter(fw8);
+		buffer8.newLine();
+		buffer8.close();
+		
+		
+		FileWriter fw14=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer14=new BufferedWriter(fw14);
+		buffer14.write("AGE OF THE PASSENGER:");
+		buffer14.close();
+	
+	
+		
+	
+	System.out.println("ENTER THE AGE OF THE CUSTOMERS:");
+	age[i]=obj.next();
+
+	FileWriter fw15=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer15=new BufferedWriter(fw15);
+		buffer15.write(age[i]);
+		buffer15.close();
+	
+		
+	FileWriter fw9=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer9=new BufferedWriter(fw9);
+		buffer9.newLine();
+		buffer9.close();
+		
+  System.out.println("ENTER THE ADDRESS OF THE PASSENGER:");  
+	address[i]=obj.next();
+	
+	FileWriter fw10=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer10=new BufferedWriter(fw10);
+		buffer10.newLine();
+		buffer10.close();
+		
+		FileWriter fw22=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer22=new BufferedWriter(fw22);
+		buffer22.write("ADDRESS OF THE PASSENGER:");
+		buffer22.close();
+		
+		FileWriter fw21=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer21=new BufferedWriter(fw21);
+		buffer21.newLine();
+		buffer21.close();
+	
+		
+		FileWriter fw20=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer20=new BufferedWriter(fw20);
+		buffer20.write(address[i]);
+		buffer20.close();
+		
+		FileWriter fw28=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer28=new BufferedWriter(fw28);
+		buffer28.newLine();
+		buffer28.close();
+			
+	
+		
+	double amount1=0.0;
+	double amount2=0.0;
+	double amount3=0.0;
+	if(class1==1&&max1>=c)
+	{
+	amount1=c*875;
+		System.out.println("YOU HAVE TO PAY=\t\t\t"+amount1);
+	}
+	else if(class1==2&&max2>=c)
+	{
+	amount2=c*1890;
+	System.out.println("YOU HAVE TO PAY =\t\t\t"+amount2);
+	}
+	else if(class1==3 &&max3>=c)
+	{
+	amount3=c*2500;
+	System.out.println("YOU HAVE TO PAY=\t\t\t"+amount3);
+	}
+	}
+	
+	FileWriter fw26=new FileWriter("C:\\Users\\Gujarati\\Desktop\\railwayss.txt",true);
+		BufferedWriter buffer26=new BufferedWriter(fw26);
+		buffer26.write("--------@Copyright Reserved------");
+		buffer26.close();
+			
+}
+}
+	catch(Exception e)
+	{
+	System.out.println("TICKET CAN'T BE BOOKED:");
+	}
+	
+     Random rand=new Random();
+	 int n=rand.nextInt(10000000)+568899;
+	 System.out.println("PNR OF THE PASSENGER:\t\t\t"+n);
+}
+}
+class cancel1 extends book1
+{
+   void cancel()
+	{
+		try{
+		File yourFile=new File("C:\\Users\\Gujarati\\Desktop\\railwayss.txt");
+		FileOutputStream f2=new FileOutputStream(yourFile);
+		 if(yourFile.exists())
+		 {
+			 PrintWriter pw=new PrintWriter(yourFile);
+			 pw.close();
+		 }
+		         
+			System.out.println("YOUR TICKET HAS BEEN CANCELLED GO TO SPECIFIED FILE:");
+			System.out.println("THE REFUNDED AMOUNT WILL BE REFUNDED INTO YOUR ACCOUNT:");
+		}
+		catch(Exception e1)
+		{
+			System.out.println("CANNOT BOOKED:"+e1);
+	}
+}
+}
+class details
+{
+	void detail()
+	{
+		try
+		{
+			
+      InputStream input = new BufferedInputStream(new FileInputStream("C:\\Users\\Gujarati\\Desktop\\railwayss.txt"));
+      byte[] buffer19 = new byte[8192];
+
+     
+    for (int length = 0; (length = input.read(buffer19)) != -1;) {
+        System.out.write(buffer19, 0, length);
+    }
+        input.close();
+		}
+		
+		
+     catch(Exception e9)
+	 {
+	  }
+    }
+}
+
+
+ class maill
+{
+	void fn()
+	{
+final String username = "garv.thadani@gmail.com";
+		final String password = "jaisakhibaba";
+
+		Properties props = new Properties();
+		props.put("mail.smtp.auth", "true");
+		props.put("mail.smtp.starttls.enable", "true");
+		props.put("mail.smtp.host", "smtp.gmail.com");
+		props.put("mail.smtp.port", "587");
+
+		Session session = Session.getInstance(props,
+		  new javax.mail.Authenticator() {
+			protected PasswordAuthentication getPasswordAuthentication() {
+				return new PasswordAuthentication(username, password);
+			}
+		  });
+
+		try {
+
+			Message message = new MimeMessage(session);
+			message.setFrom(new InternetAddress("garv.thadani@gmail.com"));
+			message.setRecipients(Message.RecipientType.TO,
+				InternetAddress.parse("sherwinkphilip@gmail.com"));
+				 BodyPart messageBodyPart = new MimeBodyPart();
+			message.setSubject("MY FIRST Subject");
+			messageBodyPart = new MimeBodyPart();
+			Multipart multipart = new MimeMultipart();
+            String filename = "C:\\Users\\Gujarati\\Desktop\\railwayss.txt";
+         DataSource source = new FileDataSource(filename);
+         messageBodyPart.setDataHandler(new DataHandler(source));
+         messageBodyPart.setFileName(filename);
+           multipart.addBodyPart(messageBodyPart);
+
+           message.setContent(multipart);
+			Transport.send(message);
+
+			System.out.println("Done");
+
+		} catch (MessagingException e) {
+			throw new RuntimeException(e);
+		}
+	}
+}
+	
+	 class railwaymain 
+	{
+	public static void main(String args[])
+	{
+		railway1 obj=new railway1();
+		obj.function();
+		function1();
+	}
+        static void function1()
+		{
+			
+			System.out.println("ENTER THE OPTION:");
+            Scanner obj4=new Scanner(System.in);
+            int  choice;
+		     choice=obj4.nextInt();	
+			
+        switch(choice)
+        {   
+        case 1:
+		 railway2 obj1=new book1();
+		try{
+			File file =new File("tarunrail.txt");
+			FileReader fr1=new FileReader(file);
+			BufferedReader br=new BufferedReader(fr1);
+			String data;
+			while((br.readLine())!=null)
+			{
+				data=br.readLine();
+				System.out.println("PASSWORD IS:"+data);
+				obj1.book();
+				
+			}
+			
+		}
+			catch(Exception e2)
+			{
+				System.out.println("TICKETS CANNOT BE BOOKED:"+e2);
+			}
+              break;
+		 
+		 
+		 
+		 case 2:
+		 details obj10=new details();
+		 obj10.detail();
+		 break;
+		 
+		 case 3:
+		 cancel1 obj5=new cancel1();
+		 obj5.cancel();
+		 break;
+		 
+		 case 4:
+		  maill obj12=new maill();
+		  obj12.fn();
+	}
+	Scanner obj9=new Scanner(System.in);
+	   System.out.println("DO YOU WHISH TO CONTINUE?"); 
+	   int choice1=obj9.nextInt();
+	   if(choice1==1)
+		  function1();
+		
+}
+	}
+	
+	   
+	
+	
+	
+	
+	
+	
+	
+	
+
+        
+
+
+
+		
